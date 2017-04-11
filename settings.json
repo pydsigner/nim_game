@@ -3,6 +3,5 @@
     "scale": 2.0,
     "resolution": {"width": -1, "height": -1},
     "accelerated": true,
-    "vsync": true,
-    "tilepack_path": "../dadren/examples/tilepacks"
+    "vsync": true
 }
