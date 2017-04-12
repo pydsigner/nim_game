@@ -21,9 +21,10 @@ converter intColor2uint8Color(t: tuple[r, g, b, a: int]):
 
 type
     GameScene = ref object of Scene
-      app: App
-      location: tuple[x, y: int]
-      color: Color
+          app: App
+
+          location: tuple[x, y: int]
+          color: Color
 
 proc newGameScene(app: App): GameScene =
     new(result)
