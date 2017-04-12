@@ -24,7 +24,7 @@ type
           app: App
 
           location: tuple[x, y: int]
-          color: Color
+          color: sdl2.Color
 
 proc newGameScene(app: App): GameScene =
     new(result)
@@ -43,7 +43,7 @@ proc randomize_color(self: GameScene) =
         total = r + b + g
     self.color = (r, g, b, 255)
 
-proc handle_key(self: GameScene, keysym: KeySym) =
+proc handle_key(self: GameScene, keysym: sdl2.KeySym) =
     # event-based input handling
     case keysym.sym:
       of K_LEFT: discard
@@ -68,7 +68,7 @@ method update(self: GameScene, t, dt: float) =
     elif keys[SDL_SCANCODE_DOWN.cint]:
         discard
 
-method handle(self: GameScene, event: Event) =
+method handle(self: GameScene, event: sdl2.Event) =
     case event.kind:
         of KeyDown:
             self.handle_key(event.key.keysym)
