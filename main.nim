@@ -82,9 +82,10 @@ method draw(self: GameScene) =
     self.app.display.drawRect(addr r)
 
 
-let
-    app = newApp("settings.json")
-    scene = newGameScene(app)
+when isMainModule:
+    let
+        app = newApp("settings.json")
+        scene = newGameScene(app)
 
-scene.draw()
-app.run(scene)
+    scene.draw()
+    app.run(scene)
