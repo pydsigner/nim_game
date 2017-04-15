@@ -1,10 +1,12 @@
-#import os
 import ospaths
 
 let
     path = thisDir()
     name = splitPath(path)[1]
 
+# for GDB happiness
+# switch("debuginfo")
+# switch("linedir", "on")
 switch("hints", "off")
 switch("verbosity", "0")
 switch("nimcache", ".nimcache")
