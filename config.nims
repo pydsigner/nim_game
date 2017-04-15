@@ -20,6 +20,10 @@ task run, "run the example":
     switch("r")
     buildTask()
 
-
+task demo, "demo the library":
+    mkDir("bin")
+    switch("r")
+    switch("out", "bin/demo")
+    setCommand("c", "demo.nim")
 
 
