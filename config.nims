@@ -26,4 +26,9 @@ task demo, "demo the library":
     switch("out", "bin/demo")
     setCommand("c", "demo.nim")
 
+task demo2, "demo the library":
+    mkDir("bin")
+    switch("r")
+    switch("out", "bin/demo2")
+    setCommand("c", "demo2.nim")
 
